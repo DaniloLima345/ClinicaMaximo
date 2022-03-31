@@ -5,9 +5,11 @@ import javax.validation.constraints.NotNull;
 
 import com.clinicamaximo.clinicamaximo.model.Medico;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class InMedicoDTO {
 
 	@NotNull
