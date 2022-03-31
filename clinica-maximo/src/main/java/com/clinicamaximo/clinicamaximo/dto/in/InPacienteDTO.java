@@ -1,17 +1,14 @@
 package com.clinicamaximo.clinicamaximo.dto.in;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-
 import com.clinicamaximo.clinicamaximo.model.Paciente;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class InPacienteDTO {
 
-	@NotNull
-	@NotBlank
 	private String nomePaciente;
 	private String cpf;
 	private String dataNascimento;

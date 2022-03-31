@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class InAtualizarPacienteDTO {
 
-	private String nome;
+	private String nomePaciente;
 	private String cpf;
 	private InEnderecoDTO endereco = new InEnderecoDTO();
 	private String dataNascimento;
@@ -23,7 +23,7 @@ public class InAtualizarPacienteDTO {
 	public Paciente atualizar(Long id, PacienteRepository pacienteRepository) {
 		Paciente paciente = pacienteRepository.getById(id);
 		
-		paciente.setNomePaciente(nome);
+		paciente.setNomePaciente(nomePaciente);
 		paciente.setCpf(cpf);
 		paciente.getEndereco().setBairro(endereco.getBairro());
 		paciente.getEndereco().setCep(endereco.getCep());
